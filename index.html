@@ -1,1 +1,264 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iJen 1 Yan Food - الصفحة الرسمية</title>
+    <!-- خط القاهرة الأنيق من قوقل -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <!-- مكتبة الأيقونات العالمية -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+    
+    <style>
+        :root {
+            --bg-color: #0c0c0c;
+            --card-bg: #161616;
+            --gold-primary: #d4af37;
+            --gold-gradient: linear-gradient(135deg, #fef1c9 0%, #d4af37 50%, #9a6f0d 100%);
+            --fire-gradient: linear-gradient(135deg, #ff4e50 0%, #f9d423 100%);
+            --text-color: #ffffff;
+            --text-secondary: #a0a0a0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            background: var(--card-bg);
+            border-radius: 24px;
+            padding: 35px 24px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+        }
+
+        .logo-area {
+            margin-bottom: 30px;
+        }
+
+        .brand-logo {
+            width: 120px;
+            height: 120px;
+            background: #000;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            border: 3px solid var(--gold-primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+            overflow: hidden;
+        }
+
+        .brand-logo i {
+            font-size: 55px;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        h1 {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+            color: #fff;
+        }
+
+        .tagline {
+            color: var(--text-secondary);
+            font-size: 13.5px;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .links-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 35px;
+        }
+
+        .btn-link {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 14px;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15.5px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-link i:first-child {
+            font-size: 24px;
+            width: 35px;
+            text-align: center;
+        }
+
+        .btn-link .btn-text {
+            flex-grow: 1;
+            text-align: right;
+            margin-right: 15px;
+        }
+
+        .btn-link i.fa-chevron-left {
+            font-size: 13px;
+            color: var(--text-secondary);
+            transition: transform 0.3s;
+        }
+
+        .btn-link:hover {
+            transform: translateY(-3px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.12);
+        }
+
+        .btn-link:hover i.fa-chevron-left {
+            transform: translateX(-4px);
+            color: var(--gold-primary);
+        }
+
+        /* زر التحدي الناري لزيادة المتابعين وتكبير الحساب */
+        .btn-challenge {
+            background: var(--fire-gradient);
+            color: #000000;
+            border: none;
+            box-shadow: 0 4px 20px rgba(255, 78, 80, 0.4);
+            animation: pulse-animation 2s infinite;
+        }
+
+        .btn-challenge i, .btn-challenge span, .btn-challenge i.fa-chevron-left {
+            color: #000000 !important;
+            font-weight: 700;
+        }
+
+        @keyframes pulse-animation {
+            0% { transform: scale(1); box-shadow: 0 4px 20px rgba(255, 78, 80, 0.4); }
+            50% { transform: scale(1.03); box-shadow: 0 4px 30px rgba(249, 212, 35, 0.7); }
+            100% { transform: scale(1); box-shadow: 0 4px 20px rgba(255, 78, 80, 0.4); }
+        }
+
+        /* تمييز زر المنيو باللون الذهبي الملكي */
+        .btn-menu {
+            background: var(--gold-gradient);
+            color: #000000;
+            border: none;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .btn-menu i, .btn-menu span, .btn-menu i.fa-chevron-left {
+            color: #000000 !important;
+        }
+
+        /* تلوين أيقونات شبكات التواصل */
+        .fa-whatsapp { color: #25D366; }
+        .fa-instagram { color: #E1306C; }
+        .fa-map-location-dot { color: #4285F4; }
+
+        .footer-info {
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            padding-top: 25px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .footer-info p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .footer-info i {
+            color: var(--gold-primary);
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- قسم شعار المطعم والهوية البصرية -->
+        <div class="logo-area">
+            <div class="brand-logo">
+                <i class="fa-solid fa-fire-burner"></i>
+            </div>
+            <h1>iJen 1 Yan Food</h1>
+            <p class="tagline">شوارما • طاكوس • بيتزا • بانيني • دوروم • باستيشيو</p>
+        </div>
+
+        <!-- قائمة أزرار الروابط التفاعلية -->
+        <div class="links-wrapper">
+            
+            <!-- زر تحدي الكشط لتكبير حساب الإنستغرام -->
+            <a href="https://instagram.com" class="btn-link btn-challenge" target="_blank">
+                <i class="fa-solid fa-gift"></i>
+                <span class="btn-text">🎁 اكشط واربح شاورما مجانية الآن!</span>
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+
+            <!-- زر فتح المنيو الرقمي وقائمة الطعام -->
+            <a href="https://instagram.com" class="btn-link btn-menu" target="_blank">
+                <i class="fa-solid fa-utensils"></i>
+                <span class="btn-text">تصفح المنيو وقائمة الأسعار</span>
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+
+            <!-- زر التوصيل والطلب الفوري للواتساب -->
+            <a href="https://wa.me" class="btn-link" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+                <span class="btn-text">اطلب الآن عبر الواتساب (Livraison)</span>
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+
+            <!-- زر المتابعة لصفحة الإنستغرام الرسمية -->
+            <a href="https://instagram.com" class="btn-link" target="_blank">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="btn-text">تابعنا على Instagram</span>
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+
+            <!-- زر موقع المطعم على الخريطة في طنجة -->
+            <a href="https://google.com" class="btn-link" target="_blank">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <span class="btn-text">موقعنا على Google Maps</span>
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+
+        </div>
+
+        <!-- معلومات الاتصال والعنوان أسفل البطاقة -->
+        <div class="footer-info">
+            <p><i class="fa-solid fa-location-dot"></i> مسنانة - جولف القواسم (أمام مسجد طه الأمين)، طنجة</p>
+            <p><i class="fa-solid fa-phone"></i> للتوصيل أو الحجز: 0682477792</p>
+        </div>
+    </div>
+
+</body>
+</html>
 
